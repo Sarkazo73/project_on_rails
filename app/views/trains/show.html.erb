@@ -4,6 +4,14 @@
   <strong>Number:</strong>
   <%= @train.number %>
 </p>
+<p>
+  <strong> on Station:</strong>
+  <% if @train.current_station.present? %>
+    <%= @train.current_station.title %>
+  <% else %>
+  The train is not at the station
+  <% end %>
+</p>
 
 <%= link_to 'Edit', edit_train_path(@train) %> |
 <%= link_to 'Back', trains_path %>
