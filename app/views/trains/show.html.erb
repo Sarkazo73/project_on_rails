@@ -13,5 +13,10 @@
   <% end %>
 </p>
 
+<p>
+  <strong>Tickets:</strong>
+  <%= @train.tickets.count %>
+</p>
+
 <%= link_to 'Edit', edit_train_path(@train) %> |
 <%= link_to 'Back', trains_path %>
