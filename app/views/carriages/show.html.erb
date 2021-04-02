@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Carriage</strong>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @carriage.number %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @carriage.carriage_type %>
+</p>
+
+<p>
+  <strong>Number of seats:</strong>
+  <%= @carriage.number_of_seats %>
+</p>
+
+<%= link_to 'Edit', edit_carriage_path(@carriage) %> |
+<%= link_to 'Back', carriages_path %>

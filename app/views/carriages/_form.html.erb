@@ -1,0 +1,27 @@
+<%= form_with(model: @carriage) do |form| %>
+  <%= render 'common/errors', resource: @carriage %>
+
+  <div class="field">
+    <%= form.label :number %>
+    <%= form.text_field :number %>
+  </div>
+
+  <dev class="field">
+    <%= form.label :train_id, "train" %>
+    <%= form.collection_select :train_id, Train.all, :id, :number %>
+  </dev>
+
+  <div class="field">
+    <%= form.label :carriage_type %>
+    <%= form.text_field :carriage_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_seats %>
+    <%= form.text_field :number_of_seats %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "#{ @carriage.new_record? ? 'create' : 'edit' }" %>
+  </div>
+<% end %>
