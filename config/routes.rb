@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   resources :carriages
   resources :routes
   resources :users do
-    resources :tickets
+    resources :tickets, controller: 'users/tickets'
   end
+  resources :tickets
 
 
   get 'welcome/index'
