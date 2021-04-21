@@ -11,17 +11,17 @@
   </thead>
 
   <tbody>
-  <% @user.tickets.each do |ticket| %>
+  <% @tickets.each do |ticket| %>
     <tr>
       <td><%= ticket.number %></td>
-      <td><%= link_to 'Show', user_ticket_path(user_id: @user.id, id: ticket.id) %></td>
-      <td><%= link_to 'Edit', edit_user_ticket_path(user_id: @user.id, id: ticket.id) %></td>
-      <td><%= link_to 'Destroy', user_ticket_path(user_id: @user.id, id: ticket.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Show', ticket %></td>
+      <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
+      <td><%= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td>can buy? - <%= ticket.user_id.nil? %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
 
 <br>
-<%= link_to 'Back', users_path %> |
-<%= link_to 'New ticket', new_user_ticket_path %>
+<%= link_to 'New ticket', new_ticket_path %>

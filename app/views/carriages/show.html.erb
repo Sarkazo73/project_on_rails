@@ -11,12 +11,27 @@
 
 <p>
   <strong>Type:</strong>
-  <%= @carriage.carriage_type %>
+  <%= @carriage.type %>
 </p>
 
 <p>
-  <strong>Number of seats:</strong>
-  <%= @carriage.number_of_seats %>
+  <strong>Top seats:</strong>
+  <%= @carriage.top_seats %>
+</p>
+
+<p>
+  <strong>Bottom seats:</strong>
+  <%= @carriage.bottom_seats %>
+</p>
+
+<p>
+  <strong>(side)Top seats:</strong>
+  <%= @carriage.side_top_seats %>
+</p>
+
+<p>
+  <strong>(side)Bottom seats:</strong>
+  <%= @carriage.side_bottom_seats %>
 </p>
 
 <%= link_to 'Edit', edit_carriage_path(@carriage) %> |
