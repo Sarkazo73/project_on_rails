@@ -16,9 +16,6 @@ class Users::TicketsController < ApplicationController
 
   def create
     @ticket = @user.tickets.build(ticket_params)
-    byebug
-
-
     if @ticket.save
       redirect_to user_ticket_path(@user.id, @ticket.id)
     else
