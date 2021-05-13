@@ -10,11 +10,14 @@ class Users::TicketsController < ApplicationController
   end
 
   def new
-    @ticket = @user.tickets.build
+
+    @ticket = @user.tickets.build(new_ticket_params)
   end
 
   def create
     @ticket = @user.tickets.build(ticket_params)
+    byebug
+
 
     if @ticket.save
       redirect_to user_ticket_path(@user.id, @ticket.id)
@@ -42,7 +45,11 @@ class Users::TicketsController < ApplicationController
   private
 
   def ticket_params
-    params.require(:ticket).permit(:number, :train_id, :start_station_id, :end_station_id)
+    params.require(:ticket).permit(:passport_number, :full_name, :train_id, :start_station_id, :end_station_id)
+  end
+
+  def new_ticket_params
+    params.permit(:train_id, :start_station_id, :end_station_id)
   end
 
   def get_user

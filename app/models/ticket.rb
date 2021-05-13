@@ -4,5 +4,6 @@ class Ticket < ActiveRecord::Base
   belongs_to :end_station, class_name: 'RailwayStation', foreign_key: :end_station_id, optional: true
   belongs_to :user, optional: true
 
-  validates :number, presence: true
+  validates :passport_number, presence: true
+  validates :full_name, presence: true
 end

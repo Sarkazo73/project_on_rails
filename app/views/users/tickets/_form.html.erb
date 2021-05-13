@@ -1,25 +1,19 @@
 <%= form_for [@user, @ticket] do |form| %>
   <%= render 'common/errors', resource: @ticket %>
+  Train number: <%= @ticket.train.number %>
+  <%= form.hidden_field :train_id %>
+  <%= form.hidden_field :start_station_id %>
+  <%= form.hidden_field :end_station_id %>
 
   <div class="field">
-    <%= form.label :number %>
-    <%= form.text_field :number %>
+    <%= form.label :passport_number %>
+    <%= form.text_field :passport_number %>
   </div>
 
-  <dev class="field">
-    <%= form.label :train_id, "Train" %>
-    <%= form.collection_select :train_id, Train.all, :id, :number %>
-  </dev>
-
-  <dev class="field">
-    <%= form.label :start_station_id, "Start Stations" %>
-    <%= form.collection_select :start_station_id, RailwayStation.all, :id, :title %>
-  </dev>
-
-  <dev class="field">
-    <%= form.label :end_station_id, "End Stations" %>
-    <%= form.collection_select :end_station_id, RailwayStation.all, :id, :title %>
-  </dev>
+  <div class="field">
+    <%= form.label :full_name %>
+    <%= form.text_field :full_name %>
+  </div>
 
   <div class="actions">
     <%= form.submit "#{ @ticket.new_record? ? 'create' : 'edit' }" %>

@@ -1,0 +1,39 @@
+<%= form_with url: search_path, method: :get do |form| %>
+
+  <dev class="field">
+    <%= form.label :start_station, "Stations first" %>
+    <%= form.collection_select :start_station, RailwayStation.all, :id, :title %>
+  </dev>
+
+  <dev class="field">
+    <%= form.label :finish_station, "Stations last" %>
+    <%= form.collection_select :finish_station, RailwayStation.all, :id, :title %>
+  </dev>
+
+  <div class="actions">
+    <%= form.submit "search" %>
+  </div>
+<% end %>
+
+<% if @trains.present? %>
+  <table>
+    <thead>
+    <tr>
+      <th>train</th>
+      <th>(время отправки)</th>
+      <th>(время прибытия)</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @trains.each do |train| %>
+      <tr>
+        <td><%= train.number %></td>
+        <td><%= train.get_station(@start_station).start_time %></td>
+        <td><%= train.get_station(@finish_station).finish_time %></td>
+        <td><%= link_to 'buy', new_user_ticket_path(1, train_id: train.id, start_station_id: @start_station, end_station_id: @finish_station) %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% end %>

@@ -23,6 +23,7 @@ class CarriagesController < ApplicationController
   end
 
   def edit
+    byebug
   end
 
   def update
