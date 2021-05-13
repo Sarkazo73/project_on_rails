@@ -11,5 +11,9 @@ class Train < ActiveRecord::Base
       carriage.update_column(:train_number, index + 1)
     end
   end
+
+  def get_station(station)
+    route.railway_stations_routes.find_by(railway_station_id: station)
+  end
 end
 

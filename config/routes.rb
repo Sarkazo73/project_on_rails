@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
   resources :tickets
 
-
+  match 'search', to: 'searches#index', via: [:get, :post]
   get 'welcome/index'
 
   root 'welcome#index'
