@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Carriage</strong>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @carriage.number %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @carriage.type %>
+</p>
+
+<p>
+  <strong>Top seats:</strong>
+  <%= @carriage.top_seats %>
+</p>
+
+<p>
+  <strong>Bottom seats:</strong>
+  <%= @carriage.bottom_seats %>
+</p>
+
+<p>
+  <strong>(side)Top seats:</strong>
+  <%= @carriage.side_top_seats %>
+</p>
+
+<p>
+  <strong>(side)Bottom seats:</strong>
+  <%= @carriage.side_bottom_seats %>
+</p>
+
+<%= link_to 'Edit', edit_admin_train_carriage_path(@carriage) %> |
+<%= link_to 'Back', admin_train_carriages_path %>
