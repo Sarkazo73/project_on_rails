@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Carriages</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @train.carriages.each do |carriage| %>
+    <tr>
+      <td><%= carriage.number %></td>
+      <td><%= link_to 'Show', admin_train_carriage_path(train_id: @train.id,id: carriage.id) %></td>
+      <td><%= link_to 'Edit', edit_admin_train_carriage_path(train_id: @train.id,id: carriage.id) %></td>
+      <td><%= link_to 'Destroy', admin_train_carriages_path(train_id: @train.id,id: carriage.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Back', admin_trains_path %> |
+<%= link_to 'New Carriage', new_admin_train_carriage_path %>
