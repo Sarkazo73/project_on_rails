@@ -2,21 +2,29 @@
   <%= render 'common/errors', resource: @carriage %>
 
   <div class="field">
-    <%= form.label :number %>
-    <%= form.text_field :number %>
+    <p>
+      <%= form.label :number, t('.number') %>
+      <%= form.text_field :number %>
+    </p>
   </div>
 
-  <dev class="field">
-    <%= form.label :train_id, "train" %>
-    <%= form.collection_select :train_id, Train.all, :id, :number %>
-  </dev>
+  <div class="field">
+    <p>
+      <%= form.label :train_id, t('.train') %>
+      <%= form.collection_select :train_id, Train.all, :id, :number %>
+    </p>
+  </div>
 
   <div class="field">
-    <%= form.label :type %>
-    <%= form.select :type, Carriage.subclasses.map {|c| [c.to_s.titleize.humanize, c]} %>
+    <p>
+      <%= form.label :type, t('.type') %>
+      <%= form.select :type, Carriage.subclasses.map {|c| [c.to_s.titleize.humanize, c]} %>
+    </p>
   </div>
 
   <div class="actions">
-    <%= form.submit "#{ @carriage.new_record? ? 'create' : 'edit' }" %>
+    <p>
+      <%= form.submit t('.submit', action: @carriage.new_record? ? 'Создать' : 'Изменить') %>
+    </p>
   </div>
 <% end %>

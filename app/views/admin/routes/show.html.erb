@@ -1,24 +1,22 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Title:</strong>
+  <strong><%= t('.current_route') %></strong>
   <%= @route.name %>
 </p>
 
 <p>
-  <strong>Trains:</strong>
+  <strong><%= t('.trains') %></strong>
   <% @route.trains.each do |train| %>
     <tr><%= train.number %></tr>
   <% end %>
 </p>
 
 <p>
-  <strong>Stations:</strong>
+  <strong><%= t('.stations') %></strong>
   <% @route.railway_stations_routes.each do |station_route| %>
     <tr><%= station_route.station_number %></tr>
     <tr><%= station_route.railway_station.title %></tr>
   <% end %>
 </p>
 
-<%= link_to 'Edit', edit_admin_route_path(@route) %> |
-<%= link_to 'Back', admin_routes_path %>
+<%= link_to t('common.back'), admin_routes_path %> |
+<%= link_to t('common.edit'), edit_admin_route_path(@route) %>

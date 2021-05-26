@@ -1,11 +1,8 @@
-<p id="notice"><%= notice %></p>
+<h1><%= t('.list_tickets') %></h1>
 
-<h1>list ticket</h1>
-
-<table>
+<table class="table">
   <thead>
   <tr>
-    <th>number</th>
     <th colspan="3"></th>
   </tr>
   </thead>
@@ -14,9 +11,9 @@
   <% @tickets.each do |ticket| %>
     <tr>
       <td><%= ticket.number %></td>
-      <td><%= link_to 'Show', [:admin, ticket] %></td>
-      <td><%= link_to 'Edit', edit_admin_ticket_path(ticket) %></td>
-      <td><%= link_to 'Destroy', [:admin, ticket], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to t('common.show'), [:admin, ticket] %></td>
+      <td><%= link_to t('common.edit'), edit_admin_ticket_path(ticket) %></td>
+      <td><%= link_to t('common.destroy'), [:admin, ticket], method: :delete, data: { confirm: t('common.are_you_sure') } %></td>
       <td>can buy? - <%= ticket.user_id.nil? %></td>
     </tr>
   <% end %>
@@ -24,5 +21,5 @@
 </table>
 
 <br>
-<%= link_to 'Back', admin_resources_index_path %> |
-<%= link_to 'New ticket', new_admin_ticket_path %>
+<%= link_to t('common.back'), admin_root_path %> |
+<%= link_to t('.new_ticket'), new_admin_ticket_path %>

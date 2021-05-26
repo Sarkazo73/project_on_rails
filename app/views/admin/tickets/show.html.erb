@@ -1,23 +1,21 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Number:</strong>
+  <strong><%= t('.number') %>:</strong>
   <%= @ticket.number %>
 </p>
 <p>
-  <strong>Train:</strong>
+  <strong><%= t('.train') %>:</strong>
   <%= @ticket.train.number %>
 </p>
 
 <p>
-  <strong>Start Station:</strong>
+  <strong><%= t('.start_station') %>:</strong>
   <%= @ticket.start_station.title %>
 </p>
 
 <p>
-  <strong>End Station:</strong>
+  <strong><%= t('.end_station') %>:</strong>
   <%= @ticket.end_station.title %>
 </p>
 
-<%= link_to 'Edit', edit_admin_ticket_path(@ticket) %> |
-<%= link_to 'Back', admin_tickets_path %>
+<%= link_to t('common.back'), admin_tickets_path %> |
+<%= link_to t('common.edit'), edit_admin_ticket_path(@ticket) %>

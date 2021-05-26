@@ -5,7 +5,7 @@ class Admin::BaseController < ApplicationController
   protected
 
   def check_admin
-    redirect_to roo_path, alert: "You are not authorized to view this page" unless current_user.admin?
+    redirect_to root_path, alert: "You are not authorized to view this page" unless current_user.admin?
   end
 
 end

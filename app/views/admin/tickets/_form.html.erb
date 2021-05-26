@@ -2,26 +2,36 @@
   <%= render 'common/errors', resource: @ticket %>
 
   <div class="field">
-    <%= form.label :number %>
-    <%= form.text_field :number %>
+    <p>
+      <%= form.label :number, t('.number') %>
+      <%= form.text_field :number %>
+    </p>
   </div>
 
-  <dev class="field">
-    <%= form.label :train_id, "Train" %>
-    <%= form.collection_select :train_id, Train.all, :id, :number %>
-  </dev>
+  <div class="field">
+    <p>
+      <%= form.label :train_id, t('.train') %>
+      <%= form.collection_select :train_id, Train.all, :id, :number %>
+    </p>
+  </div>
 
-  <dev class="field">
-    <%= form.label :start_station_id, "Start Stations" %>
-    <%= form.collection_select :start_station_id, RailwayStation.all, :id, :title %>
-  </dev>
+  <div class="field">
+    <p>
+      <%= form.label :start_station_id, t('.start_station') %>
+      <%= form.collection_select :start_station_id, RailwayStation.all, :id, :title %>
+    </p>
+  </div>
 
-  <dev class="field">
-    <%= form.label :end_station_id, "End Stations" %>
-    <%= form.collection_select :end_station_id, RailwayStation.all, :id, :title %>
-  </dev>
+  <div class="field">
+    <p>
+      <%= form.label :end_station_id, t('.end_station') %>
+      <%= form.collection_select :end_station_id, RailwayStation.all, :id, :title %>
+    </p>
+  </div>
 
   <div class="actions">
-    <%= form.submit "#{ @ticket.new_record? ? 'create' : 'edit' }" %>
+    <p>
+      <%= form.submit t('.submit', action: @ticket.new_record? ? 'Создать' : 'Изменить' ) %>
+    </p>
   </div>
 <% end %>
