@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
     if current_user.admin?
       admin_resources_index_path
     else
-      user_tickets_path(user_id: current_user.id)
+      tickets_path
     end
   end
 

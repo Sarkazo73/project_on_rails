@@ -1,0 +1,164 @@
+ru:
+  common:
+    back: "Назад"
+    edit: "Изменить"
+    show: "Смотреть"
+    destroy: "Удалить"
+    are_you_sure: "Вы уверены?"
+    errors: "При заполнении формы возникли ошибки"
+  layouts:
+    application:
+      get_in: "Войти"
+      get_out: "Выйти"
+      account: "Аккаунт"
+      name: "Имя"
+
+  admin:
+    resources:
+      index:
+        stations: "Станции"
+        routes: "Маршруты"
+        tickets: "Билеты"
+        trains: "Поезда"
+        users: "Пользователи"
+    users:
+      index:
+        list_users: "Список пользователей"
+        new_user: "Новый пользователь"
+      show:
+        current_user: "Текущий пользователь"
+      new:
+        new_user: "Новый пользователь"
+      edit:
+        edit_user: "Изменить пользователя"
+      form:
+        submit: "%{action} пользователь"
+        name: "Пользователь"
+    railway_stations:
+      index:
+        list_stations: "Список станций"
+        new_station: "Новая станция"
+      show:
+        Station_is_not_included: "Станция не входит ни в один маршрут"
+        Station_is_included: "Станция входит в эти маршруты"
+        current_station: "Текущая станция"
+      new:
+        new_station: "Новая станция"
+      edit:
+        edit_station: "Изменить станцию"
+      form:
+        submit: "%{action} станцию"
+    routes:
+      index:
+        new_route: "Новый маршрут"
+        list_routes: "Список маршрутов"
+      show:
+        current_route: "Текущий маршрут"
+        trains: "Поезда"
+        stations: "Станции"
+      new:
+        new_route: "Новый маршрут"
+      edit:
+        edit_route: "Изменить маршрут"
+      form:
+        submit: "%{action} маршрут"
+        stations: "Станции"
+        name: "Название"
+    tickets:
+      index:
+        new_ticket: "Новый билет"
+        list_tickets: "Список билетов"
+      show:
+        train: "Поезд"
+        start_station: "Начальная станция"
+        end_station: "Конечная станция"
+        number: "Номер"
+      new:
+        new_ticket: "Новый билет"
+      edit:
+        edit_ticket: "Изменить билет"
+      form:
+        submit: "%{action} билет"
+        train: "Поезд"
+        start_station: "Начальная станция"
+        end_station: "Конечная станция"
+        number: "Номер"
+    trains:
+      index:
+        new_train: "Новый поезд"
+        list_trains: "Список поездов"
+      show:
+        sleeping_carriage: "Спальный вагон"
+        seating_carriage: "Сидячий вагон"
+        coupe_carriage: "Купейный вагон"
+        economy_carriage: "Плацкартный вагон"
+        start_from_head: "Начало с головы"
+        current_station: "Текущая станция"
+        route: "Маршрут"
+        number: "Номер"
+        tickets_count: "Количество билетов"
+        carriage: "Поезд"
+        type: "Тип"
+      new:
+        new_train: "Новый поезд"
+      edit:
+        edit_train: "Изменить поезд"
+      form:
+        submit: "%{action} поезд"
+        start_from_head: "Начало с головы"
+        current_station: "Текущая станция"
+        route: "Маршрут"
+        number: "Номер поезда"
+    carriages:
+      index:
+        new_carriage: "Новый вагон"
+        list_carriages: "Список вагонов"
+      show:
+        number: "Номер"
+        sleeping_carriage: "Спальный вагон"
+        seating_carriage: "Сидячий вагон"
+        coupe_carriage: "Купейный вагон"
+        economy_carriage: "Плацкартный вагон"
+        type: "Тип"
+        top_seats: "Верхние места"
+        bottom_seats: "Нижние места"
+        side_top_seats: "(боковые)Верхние места"
+        side_bottom_seats: "(боковые)Нижние места"
+      new:
+        new_carriage: "Новый вагон"
+      edit:
+        edit_carriage: "Изменить вагон"
+      form:
+        submit: "%{action} вагон"
+        train: "Поезд"
+        number: "Номер"
+        type: "Тип"
+  tickets:
+    index:
+      list_tickets: "Список билетов"
+      new_ticket: "Новый билет"
+    show:
+      train: "Поезд"
+      start_station: "Начальная станция"
+      end_station: "Конечная станция"
+      number: "Номер"
+    new:
+      new_ticket: "Новый билет"
+    edit:
+      edit_ticket: "Изменить билет"
+    form:
+      submit: "%{action} билет"
+  searches:
+    index:
+      start_station: "Начальная станция"
+      finish_station: "Конечная станция"
+      search: "Поиск"
+      train: "Поезд"
+      departure_time: "Время отправки"
+      arrival_time: "Время прибытя"
+      buy: "Купить"
+      you_can`t_buy: "Не авторизованные пользователи не могут покупать билеты"
+  welcome:
+    index:
+      hi_friend: "Привет, друг! ;)"
+      search: "Поиск"

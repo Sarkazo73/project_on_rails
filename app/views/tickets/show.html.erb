@@ -1,0 +1,21 @@
+<p>
+  <strong><%= t('.number') %>:</strong>
+  <%= @ticket.full_name %>
+</p>
+<p>
+  <strong><%= t('.train') %>:</strong>
+  <%= @ticket.train.number %>
+</p>
+
+<p>
+  <strong><%= t('.start_station') %>:</strong>
+  <%= @ticket.start_station.title %>
+</p>
+
+<p>
+  <strong><%= t('.end_station') %>:</strong>
+  <%= @ticket.end_station.title %>
+</p>
+
+<%= link_to t('common.back'), tickets_path %> |
+<%= link_to t('common.edit'), edit_ticket_path(@ticket) %>

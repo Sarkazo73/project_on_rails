@@ -1,55 +1,53 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Number:</strong>
+  <strong><%= t('.number') %>:</strong>
   <%= @train.number %>
 </p>
 <p>
-  <strong> on Station:</strong>
+  <strong> <%= t('.current_station') %>:</strong>
   <% if @train.current_station.present? %>
     <%= @train.current_station.title %>
   <% else %>
-  The train is not at the station
+  <%= t('.current_station') %>
   <% end %>
 </p>
 
 <p>
-  <strong> on Route:</strong>
+  <strong><%= t('.route') %>:</strong>
   <% if @train.route.present? %>
     <%= @train.route.name %>
   <% else %>
-    The train is not at the route
+    The train is not on the route
   <% end %>
 </p>
 
 <p>
-  <strong>Tickets:</strong>
+  <strong><%= t('.tickets_count') %>:</strong>
   <%= @train.tickets.count %>
 </p>
 
 <p>
-  <strong>Start from head:</strong>
+  <strong><%= t('.start_from_head') %>:</strong>
   <%= @train.start_from_head %>
 </p>
 
 <p>
-  <strong>Carriages:</strong>
-  <table>
+  <strong><%= t('.carriage') %>:</strong>
+  <table class="table">
     <tr>
-      <th>Number</th>
-      <th>Type</th>
+      <th><%= t('.number') %></th>
+      <th><%= t('.type') %></th>
       <th>ID</th>
     </tr>
     <% @train.carriages.order_by_train_number(@train.start_from_head).each do |carriage| %>
       <tr>
         <th><%= carriage.train_number %></th>
-        <th><%= carriage.type %></th>
+        <th><%= t(".#{carriage.type.underscore}") %></th>
         <th><%= carriage.number %></th>
-        <th><%= link_to 'Show', admin_train_carriage_path(carriage) %></th>
+        <th><%= link_to t('common.show'), admin_train_carriage_path(carriage) %></th>
       </tr>
     <% end %>
   </table>
 </p>
 
-<%= link_to 'Edit', edit_admin_train_path(@train) %> |
-<%= link_to 'Back', admin_trains_path %>
+<%= link_to t('common.back'), admin_trains_path %> |
+<%= link_to t('common.edit'), edit_admin_train_path(@train) %>

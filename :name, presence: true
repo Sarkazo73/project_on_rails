@@ -1,0 +1,104 @@
+[33mcommit 24520de3f4afa896830c64603bef972d5eb9888f[m[33m ([m[1;36mHEAD -> [m[1;32mtask_18[m[33m, [m[1;31morigin/task_16[m[33m, [m[1;32mtask_16[m[33m)[m
+Author: Michael <zhr0n4x@gmail.com>
+Date:   Tue May 18 13:19:47 2021 +0300
+
+    complete seventeen task
+
+[33mcommit 2d860dfca49e9b0d7d303c623ab1bfbba9513a6a[m
+Author: Michael <zhr0n4x@gmail.com>
+Date:   Thu May 13 20:03:36 2021 +0300
+
+    complete sixteenth task fix
+
+[33mcommit 7efe6385e704b209e7c3b89a7dfc8c33e26cd545[m
+Author: Michael <zhr0n4x@gmail.com>
+Date:   Thu May 13 20:00:04 2021 +0300
+
+    complete sixteenth task fix
+
+[33mcommit a10db279a735e266dadb59e2d126a5a2367739fc[m
+Author: Michael <zhr0n4x@gmail.com>
+Date:   Thu May 13 19:56:48 2021 +0300
+
+    complete sixteenth task
+
+[33mcommit f4c9d8e889c0339487fbe998c97e8eb2bc3e30b0[m[33m ([m[1;31morigin/task_14[m[33m, [m[1;32mtask_14[m[33m)[m
+Author: Michael <zhr0n4x@gmail.com>
+Date:   Wed Apr 21 17:52:52 2021 +0300
+
+    complete tasks fourteen and fifteen
+
+[33mcommit 6e04da83190eb918aa953216bbca2846cc6e0220[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: 8b6befc f9a2f5f
+Author: Sarkazo73 <78928296+Sarkazo73@users.noreply.github.com>
+Date:   Fri Apr 2 11:04:50 2021 +0300
+
+    Merge pull request #3 from Sarkazo73/task_13
+    
+    solved task number thirteen
+
+[33mcommit f9a2f5f8fd6a095f3c78778350beedadc9a01159[m[33m ([m[1;31morigin/task_13[m[33m, [m[1;32mtask_13[m[33m)[m
+Author: Michael <zhr0n4x@gmail.com>
+Date:   Fri Apr 2 11:01:55 2021 +0300
+
+    solved task number thirteen
+
+[33mcommit 8b6befc176b9735bfa7c0e40dd6a3167891dcca3[m
+Merge: 3e9213b ef6330e
+Author: Sarkazo73 <78928296+Sarkazo73@users.noreply.github.com>
+Date:   Thu Mar 25 12:11:41 2021 +0200
+
+    Merge pull request #2 from Sarkazo73/test
+    
+    Did the twelfth task
+
+[33mcommit ef6330e9b89e8e9614d947fa3d70e26b093c8656[m[33m ([m[1;31morigin/test[m[33m, [m[1;32mtest[m[33m)[m
+Author: Michael <zhr0n4x@gmail.com>
+Date:   Thu Mar 25 12:05:47 2021 +0200
+
+    did the twelfth task
+
+[33mcommit 1b53ad9731823172f841be8873e119808bcf7020[m
+Author: Michael <zhr0n4x@gmail.com>
+Date:   Thu Mar 18 17:12:21 2021 +0200
+
+    add migrate route with trains
+
+[33mcommit ff9f03b58a73e0558f48586e4cf424ee8815f648[m
+Author: Michael <zhr0n4x@gmail.com>
+Date:   Mon Mar 15 13:40:02 2021 +0200
+
+    add avtoname route (first + last station)
+
+[33mcommit 3e9213bddeeb64817987637f15206d3d045d89d1[m
+Merge: b71349e b902937
+Author: Sarkazo73 <78928296+Sarkazo73@users.noreply.github.com>
+Date:   Thu Mar 11 12:42:27 2021 +0200
+
+    Merge pull request #1 from Sarkazo73/routes
+    
+    Routes
+
+[33mcommit b90293752c52e367a005bdc38df642e4e6226d9c[m[33m ([m[1;31morigin/routes[m[33m, [m[1;32mroutes[m[33m)[m
+Author: Michael <zhr0n4x@gmail.com>
+Date:   Thu Mar 11 12:38:37 2021 +0200
+
+    Add edit view
+
+[33mcommit 49dda81947afdfc90cfdf1434c1db03d158c3c7c[m
+Author: Michael <zhr0n4x@gmail.com>
+Date:   Thu Mar 11 12:21:50 2021 +0200
+
+    Add views for Routes
+
+[33mcommit 4c8cd3d2b6de91d10a4a7a0ce21bbd196f3a4d11[m
+Author: Michael <zhr0n4x@gmail.com>
+Date:   Thu Mar 11 12:04:45 2021 +0200
+
+    Routes controller
+
+[33mcommit b71349ed8ecd303281f529580805b2d3c18baaaa[m
+Author: Michael <zhr0n4x@gmail.com>
+Date:   Tue Mar 9 19:13:19 2021 +0200
+
+    project on rails

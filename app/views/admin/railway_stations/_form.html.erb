@@ -2,11 +2,15 @@
   <%= render 'common/errors', resource: railway_station %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <p>
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+    </p>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <p>
+      <%= form.submit t('.submit', action: @railway_station.new_record? ? 'Создать' : 'Изменить' ) %>
+    </p>
   </div>
 <% end %>

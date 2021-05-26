@@ -3,10 +3,9 @@ class Route < ApplicationRecord
   has_many :railway_stations, through: :railway_stations_routes
   has_many :trains
 
-  validates :name, presence: true
   validate :station_count
 
-  before_validation :set_name
+  after_validation :set_name
   before_save :add_number
 
   scope :by_start_and_finish, ->(start_id, finish_id) do
@@ -17,10 +16,6 @@ class Route < ApplicationRecord
   end
 
   private
-
-  def set_name
-    self.name = "#{railway_stations.first.title} - #{railway_stations.last.title}"
-  end
 
   def add_number
     railway_stations_routes.each_with_index do |station_route, index|
@@ -33,7 +28,13 @@ class Route < ApplicationRecord
 
   def station_count
     if railway_stations.size < 2
-      error.add(:base, "Route should contain at last 2 stations")
+      errors.add(:base, "Route should contain at least 2 stations")
+    end
+  end
+
+  def set_name
+    if railway_stations.size > 2
+      self.name = "#{railway_stations.first.title} - #{railway_stations.last.title}"
     end
   end
 end

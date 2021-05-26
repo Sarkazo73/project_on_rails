@@ -1,39 +1,49 @@
 <%= form_with url: search_path, method: :get do |form| %>
 
-  <dev class="field">
-    <%= form.label :start_station, "Stations first" %>
-    <%= form.collection_select :start_station, RailwayStation.all, :id, :title %>
-  </dev>
+  <div class="row g-3">
+    <div class="field col-md-4">
+      <%= form.label :start_station, t('.start_station') %>
+      <%= form.collection_select :start_station, RailwayStation.all, :id, :title, {}, { class: "form-select" } %>
+    </div>
 
-  <dev class="field">
-    <%= form.label :finish_station, "Stations last" %>
-    <%= form.collection_select :finish_station, RailwayStation.all, :id, :title %>
-  </dev>
+    <div class="field col-md-4">
+      <%= form.label :finish_station, t('.finish_station') %>
+      <%= form.collection_select :finish_station, RailwayStation.all, :id, :title, {}, { class: "form-select" } %>
+    </div>
 
-  <div class="actions">
-    <%= form.submit "search" %>
+    <div class="actions col-md-4">
+      <br />
+      <%= form.submit t('.search'), class: "btn btn-primary" %>
+    </div>
   </div>
 <% end %>
 
 <% if @trains.present? %>
-  <table>
+  <table class="table">
     <thead>
-    <tr>
-      <th>train</th>
-      <th>departure time</th>
-      <th>arrival time</th>
-    </tr>
+      <tr>
+        <th><%= t('.train') %></th>
+        <th><%= t('.departure_time') %></th>
+        <th><%= t('.arrival_time') %></th>
+      </tr>
     </thead>
 
     <tbody>
-    <% @trains.each do |train| %>
-      <tr>
-        <td><%= train.number %></td>
-        <td><%= train.get_station(@start_station).start_time %></td>
-        <td><%= train.get_station(@finish_station).finish_time %></td>
-        <td><%= link_to 'buy', new_user_ticket_path(1, train_id: train.id, start_station_id: @start_station, end_station_id: @finish_station) %></td>
-      </tr>
-    <% end %>
+      <% @trains.each do |train| %>
+        <tr>
+          <td><%= train.number %></td>
+          <td><%= train.get_station(@start_station).start_time %></td>
+          <td><%= train.get_station(@finish_station).finish_time %></td>
+          <td><%= link_to t('.buy'), new_ticket_path(current_user.id, train_id: train.id, start_station_id: @start_station, end_station_id: @finish_station) if current_user %></td>
+        </tr>
+      <% end %>
+      <%= t('.you_can`t_buy') unless current_user %>
     </tbody>
   </table>
+<% end %>
+
+<% if current_user %>
+  <%= link_to t('common.back'), tickets_path %>
+<% else %>
+  <%= link_to t('common.back'), root_path %>
 <% end %>
